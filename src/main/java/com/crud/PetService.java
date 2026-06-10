@@ -1,9 +1,10 @@
 package com.crud;
-import java.util.ArrayList;
-import java.util.List;
+
+
+import java.util.*; 
 
 public class PetService {
-  private List<Pet> pets = new ArrayList<>();
+    private List<Pet> pets = new ArrayList<>();
 
     public void addPet(Pet pet) {
         pets.add(pet);
@@ -11,6 +12,7 @@ public class PetService {
         try {
             int x = 1 / 1;
         } catch (Exception e) {
+            // PMD odia los catch vacíos
         }
     }
 
@@ -18,7 +20,8 @@ public class PetService {
         return pets;
     }
 
-    public void clearPets() {
+
+    public void ESTE_METODO_ESTA_MAL_NOMBRADO() {
         pets.clear();
     }
 }
