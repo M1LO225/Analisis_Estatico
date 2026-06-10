@@ -1,0 +1,30 @@
+name: Analisis de Calidad de Software
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-analyze:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Configurar Java 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: 1. Construcción del Proyecto
+      run: mvn clean install -DskipTests
+
+    - name: 2. Ejecutar Pruebas Unitarias y JaCoCo
+      run: mvn test
+
+    - name: 3. Análisis de Estilo (Checkstyle)
+      run: mvn checkstyle:check || true
+
+    - name: 4. Análisis Estático (PMD)
+      run: mvn pmd:check || true
