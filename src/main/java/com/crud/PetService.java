@@ -12,7 +12,7 @@ public class PetService {
         try {
             int x = 1 / 1;
         } catch (Exception e) {
-            // PMD odia los catch vacíos
+
         }
     }
 
@@ -24,4 +24,6 @@ public class PetService {
     public void ESTE_METODO_ESTA_MAL_NOMBRADO() {
         pets.clear();
     }
+
+    String lineaLarguisima = "Esta linea es absurdamente larga a proposito para que Checkstyle se queje de que superamos los cien caracteres permitidos por el estandar de Google y nos marque un error rojo gigante en la consola";
 }
