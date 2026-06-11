@@ -1,29 +1,40 @@
 package com.crud;
 
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.*; 
+/**
+ * Servicio para gestionar las operaciones CRUD de las mascotas.
+ */
+public final class PetService {
 
-public class PetService {
-    private List<Pet> pets = new ArrayList<>();
+    /**
+     * Lista interna para almacenar las mascotas.
+     */
+    private final List<Pet> pets = new ArrayList<>();
 
-    public void addPet(Pet pet) {
+    /**
+     * Agrega una nueva mascota a la lista.
+     *
+     * @param pet la mascota a agregar
+     */
+    public void addPet(final Pet pet) {
         pets.add(pet);
-        String variableInutil = "No me usan";
-        try {
-            int x = 1 / 1;
-        } catch (Exception e) {
-
-        }
     }
 
+    /**
+     * Obtiene la lista de mascotas registradas.
+     *
+     * @return la lista de mascotas
+     */
     public List<Pet> getPets() {
         return pets;
     }
 
-
-    public void ESTE_METODO_ESTA_MAL_NOMBRADO() {
+    /**
+     * Elimina todas las mascotas de la lista.
+     */
+    public void clearPets() {
         pets.clear();
     }
-
-    String lineaLarguisima = "Esta linea es absurdamente larga a proposito para que Checkstyle se queje de que superamos los cien caracteres permitidos por el estandar de Google y nos marque un error rojo gigante en la consola";
 }
