@@ -33,14 +33,11 @@
         </executions>
       </plugin>
       <!-- 2. Plugin de Checkstyle -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.0</version>
-        <configuration>
-          <configLocation>google_checks.xml</configLocation>
-        </configuration>
-      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.3.0</version>
+        </plugin>
       <!-- 3. Plugin de PMD -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

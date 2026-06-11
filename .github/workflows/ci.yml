@@ -28,3 +28,12 @@ jobs:
 
     - name: 4. Análisis Estático (PMD)
       run: mvn pmd:check || true
+
+    - name: 5. Generar Reportes XML en la nube
+      run: mvn jacoco:report checkstyle:checkstyle pmd:pmd || true
+
+    - name: 6. Empaquetar y descargar reportes
+      uses: actions/upload-artifact@v4
+      with:
+        name: reportes-xml
+        path: target/
